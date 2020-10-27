@@ -5,7 +5,7 @@ $(document).ready(function() {
     var circle = $('.nav i');
 
 
-
+    // nav click
     btnPrev.click(function() {
 
         scorrimentoImg('prev');
@@ -17,6 +17,20 @@ $(document).ready(function() {
         scorrimentoImg('next');
         
     });
+
+
+    // nav keyboard
+    $(document).keydown(function() {
+
+        console.log(Event.keyCode);
+
+        if ( event.keyCode == 37) {
+            scorrimentoImg('prev');
+        }
+        else if (event.keyCode == 39) {
+            scorrimentoImg('next');
+        }
+    })
 
 
     // funzioni
